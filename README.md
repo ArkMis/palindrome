@@ -1,0 +1,2 @@
+# palindrome
+Kodilla - zadanie palindrom
