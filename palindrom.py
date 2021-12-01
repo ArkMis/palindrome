@@ -1,6 +1,7 @@
 def palindrom(str):
     """
        str - string
+       return - True/False
     """
     cc=len(str)
     flaga=True
