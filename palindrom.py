@@ -1,13 +1,29 @@
+#import locale
+#locale.setlocale(locale.LC_ALL,'Polish')
+
+def only_letter(str):
+    """
+       funkcja zwraca string pozbawiony 
+       innych znaków niż litery
+    """
+    str_only_alfa=''
+    for char in str:
+       if char.isalpha():
+        str_only_alfa += char
+    return str_only_alfa
+
 def palindrom(str):
     """
-       str - string
+       funkcja sprawdza, czy string jest palindromem
        return - True/False
     """
-    cc=len(str)
+    word=only_letter(str)
+    word=word.lower()
+    cc=len(word)
     flaga=True
     for i in range(int(cc/2)):
-        if str[i]!=str[cc-1-i]:
+        if word[i]!=word[cc-1-i]:
            flaga=False
     return flaga
 
-print(palindrom('pota atop'))
+print(palindrom('Kobyła ma MAŁY bok.'))
